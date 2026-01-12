@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #0d1117;
+    overflow-x: hidden;
+}
+
+/* Blog Page Styles */
+.blog-page {
+    background: #0d1117;
+    min-height: 100vh;
+}
+
+.blog-hero {
+    padding: 4rem 5% 6rem;
+    text-align: center;
+    background: 
+        url("https://gustavobeltran.es/wp-content/uploads/2024/12/Background.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.blog-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-page-card {
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid rgba(200, 170, 100, 0.3);
+}
+
+.blog-page-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-page-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-page-content {
+    padding: 1.25rem;
+}
+
+.blog-page-content h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.blog-page-content h4 a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-underline-offset: 3px;
+    transition: color 0.3s;
+}
+
+.blog-page-content h4 a:hover {
+    color: #EFB810;
+    text-decoration-color: #EFB810;
+}
+
+.blog-page-content .date {
+    color: #EFB810;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3rem 5%;
+}
+
+.blog-pagination .page-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.blog-pagination .page-number:hover,
+.blog-pagination .page-number.active {
+    background: #EFB810;
+    border-color: #EFB810;
+    color: #0d1117;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
